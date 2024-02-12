@@ -137,6 +137,7 @@ Once the workflow is triggered, monitor its execution in the Actions tab.
 Ensure that the workflow completes successfully, particularly the unit testing step.
 Refer to the YAML file below to configure your Solar System Workflow, notice the MONGO_PASSWORD env value is reference from secrets.
 
+Open in editor mode for better view
 ---
 name: Solar System Workflow
 on:
