@@ -47,3 +47,39 @@ If the installation was successful, you should be able to run the following comm
 ## Access Application on Browser
     http://localhost:3000/
 
+------------------------------------------------------------
+
+Navigate to your GitHub account and explore github-actions-solar-system repository
+Go to the Actions Tab and click on I understand my workflows, go ahead and enable them
+There is a workflow file named solar-system.yml
+There is one job named - unit-testing
+The Job includes multiple steps to:
+
+Checkout repository
+Setup Node.js
+Install dependencies
+Run unit tests
+Archive test reports
+Do the following
+1) Create a new branch from the main and name it feature/workflow and switch to it
+
+A workflow should be triggered. Check that it fails in the unit testing step.
+2) Work on the feature/workflow branch, add the following environment variables at the workflow level:
+MONGO_URI: ‘mongodb+srv://supercluster.d83jj.mongodb.net/superData'
+MONGO_USERNAME: superuser
+MONGO_PASSWORD: SuperPassword
+For MONGO_PASSWORD, add it as a Repository Secret and refer it in the workflow environment variables
+3) Trigger the workflow and check that it runs successfully
+
+
+
+
+Was the feature/workflow branch created successfully?
+
+Is the MONGO_URI variable configured correctly?
+
+Is the MONGO_USERNAME variable configured correctly?
+
+Is the MONGO_PASSWORD secret being created?
+
+Does the MONGO_PASSWORD environment variable in the workflow reference a value in secrets?
