@@ -28,8 +28,13 @@ jobs:
     
         - name: Unit Testing
           run: npm test
-          
+
+#Currently, the Archive test reports step only run when the previous step
+#are successfully completed. Modify the step to execute even when any of
+#the previous steps result in failure.
+
         - name: Archive Test Result
+          if: always() #added
           uses: actions/upload-artifact@v3
           with:
             name: Mocha-Test-Result
